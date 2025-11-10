@@ -3,13 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	// firstName //will take from the new func
 	firstName := getUserInfo("First Name: ")
-	// lastName
 	lastName := getUserInfo("Last Name: ")
-	// birthDate
 	birthDate := getUserInfo("Birth Date: ")
 
+	fmt.Println(firstName, lastName, birthDate)
+}
+
+// Need to pass te data
+func OutputUserInfo(firstName, lastName, birthDate string) {
 	fmt.Println(firstName, lastName, birthDate)
 }
 
