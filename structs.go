@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+type User struct {
+	firstName string
+	lastName  string
+	birthDate string
+}
+
 func main() {
 	firstName := getUserInfo("First Name: ")
 	lastName := getUserInfo("Last Name: ")
