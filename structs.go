@@ -1,24 +1,37 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 type User struct {
 	firstName string
 	lastName  string
 	birthDate string
+	createdAt time.Time
 }
 
 func main() {
-	firstName := getUserInfo("First Name: ")
-	lastName := getUserInfo("Last Name: ")
-	birthDate := getUserInfo("Birth Date: ")
+	userFirstName := getUserInfo("First Name: ")
+	userLastName := getUserInfo("Last Name: ")
+	userBirthDate := getUserInfo("Birth Date: ")
 
 	fmt.Println(firstName, lastName, birthDate)
 }
 
-// Need to pass te data
-func OutputUserInfo(firstName, lastName, birthDate string) {
-	fmt.Println(firstName, lastName, birthDate)
+var appUser User
+
+appUser = User{
+	firstName: userFirstName,
+	lastName:  userLastName,
+	birthDate: userBirthDate,
+	createdAt: time.Now(),
+}
+
+// Need to pass the data
+func OutputUserInfo(u User) {
+	fmt.Println(u.firstName, u.lastName, u.birthDate)
 }
 
 func getUserInfo(userInput string) string {
