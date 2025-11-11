@@ -17,7 +17,7 @@ func main() {
 	userLastName := getUserInfo("Last Name: ")
 	userBirthDate := getUserInfo("Birth Date: ")
 
-	fmt.Println(firstName, lastName, birthDate)
+	// fmt.Println(firstName, lastName, birthDate)
 
 	var appUser User
 
