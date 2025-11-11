@@ -18,15 +18,18 @@ func main() {
 	userBirthDate := getUserInfo("Birth Date: ")
 
 	fmt.Println(firstName, lastName, birthDate)
-}
 
-var appUser User
+	var appUser User
 
-appUser = User{
-	firstName: userFirstName,
-	lastName:  userLastName,
-	birthDate: userBirthDate,
-	createdAt: time.Now(),
+	appUser = User{
+		firstName: userFirstName,
+		lastName:  userLastName,
+		birthDate: userBirthDate,
+		createdAt: time.Now(),
+	}
+
+	OutputUserInfo(appUser)
+
 }
 
 // Need to pass the data
